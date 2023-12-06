@@ -1,0 +1,44 @@
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0 auto;
+    padding: 0;
+}
+img{
+    width: 342px;
+    height: 280px;
+}
+.container{
+    display: grid;
+    grid-template-areas: 
+    "nav"
+    "section"
+    "main"
+    "footer"
+    ;
+}
+nav{
+    background-color: antiquewhite;
+    grid-area: nav;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+@media screen and (max-width: 480px) {
+    nav ul {
+      display: none;
+    }
+}
+section{
+    background-color: aqua;
+    grid-area: section;
+}
+main{
+    background-color: cadetblue;
+    grid-area: main;
+}
+footer{
+    background-color: thistle;
+    grid-area: footer;
+}
