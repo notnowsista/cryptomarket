@@ -17,7 +17,8 @@ img{
     ;
 }
 nav{
-    background-color: antiquewhite;
+    background-color: whitesmoke;
+    color: #525252;
     grid-area: nav;
     display: flex;
     justify-content: space-between;
@@ -34,7 +35,7 @@ nav{
     font-size: xx-large;
 }
 section{
-    background-color: aqua;
+    background-color: #F0ECE5;
     grid-area: section;
 }
 .filter{
@@ -52,7 +53,7 @@ form{
 
 }
 main{
-    background-color: cadetblue;
+    background-color: white;
     grid-area: main;
     display: grid;
     grid-template-columns: 1fr;
@@ -67,9 +68,13 @@ main{
 }
 button{
     padding: 10px;
+    background-color: #CA3E47;
+    color: #F0ECE5;
+    font-weight: bold;
 }
 footer{
-    background-color: thistle;
+    background-color: whitesmoke;
+    color: #525252;
     grid-area: footer;
     text-align: center;
     display: flex;
@@ -87,6 +92,8 @@ footer{
     font-size: 20px;
     font-weight: 500;
     border: 1px solid gray;
+    background-color: #F0ECE5;
+    color: #525252;
     text-decoration: none;
     display: inline-block;
     width: 20px;
@@ -97,39 +104,40 @@ footer h2{
     font-size: medium;
 }
 /* Media queries*/ 
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 576px){
     .hide-menu {
-      display: none;
-    }
+        display: none;
+      }
     nav ul{
-        list-style: none;
-    }
+          list-style: none;
+          display: flex;
+          flex-direction: row;
+          padding-right: 20px;
+          gap: 30px;
+      }
     .container{
         display: grid;
         grid-template-areas: 
-        "nav section"
-        "nav main"
-        "footer main"
+        "nav nav"
+        "section main"
+        "footer footer"
         ;
         grid-template-columns: 15% 85%;
         height: 100vh;
     }
-    nav{
-        background-color: antiquewhite;
-        grid-area: nav;
-        display: flex;
-        flex-direction: column;
-        justify-content: start;
-        align-items: center;
+    section{
+        background-color: #CA3E47;
+        color: whitesmoke;
     }
-    nav .logo-menu{
-        padding: 0;
+    img{
+        width: 200px;
+        height: 150px;
     }
-    nav li{
-        padding: 5%;
+    button{
+        padding: 5px;
     }
     main{
-        background-color: cadetblue;
+        background-color: white;
         grid-area: main;
         display: flex;
         flex-direction: column;
@@ -149,6 +157,79 @@ footer h2{
     }
     .paginacion a{
         background-color: antiquewhite;
+        width: 15px;
+    }
+}
+@media screen and (min-width: 992px) {
+    .hide-menu {
+      display: none;
+    }
+    nav ul{
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        font-weight: 500;
+    }
+    img{
+        width: 300px;
+        height: 250px;
+    }
+    .container{
+        display: grid;
+        grid-template-areas: 
+        "nav section"
+        "nav main"
+        "footer main"
+        ;
+        grid-template-columns: 15% 85%;
+        height: 100vh;
+    }
+    nav{
+        background-color: #414141;
+        color: whitesmoke;
+        grid-area: nav;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        font-size: 90%;
+    }
+    nav .logo-menu{
+        padding: 0;
+        background-color: #313131;
+        width: 100%;
+        padding-left: 5%;
+    }
+    nav li{
+        padding: 5%;
+    }
+    main{
+        background-color: #525252;
+        grid-area: main;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: center;
+    }
+    .coin-container{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .paginacion{
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+    .paginacion a{
+        background-color: whitesmoke;
+        color: #525252;
+    }
+    footer{
+        background-color: #313131;
+        color: whitesmoke;
     }
 
 }
