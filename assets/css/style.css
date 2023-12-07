@@ -152,6 +152,7 @@ footer h2 {
         background-color: #CA3E47;
         color: whitesmoke;
         display: flex;
+        flex-wrap: wrap;
         flex-direction: column;
         justify-content: flex-start;
         align-items: stretch;
