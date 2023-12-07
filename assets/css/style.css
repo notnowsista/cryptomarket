@@ -1,22 +1,25 @@
-body{
+body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
 }
-img{
+
+img {
     width: 300px;
     height: 250px;
 }
-.container{
+
+.container {
     display: grid;
-    grid-template-areas: 
-    "nav"
-    "section"
-    "main"
-    "footer"
+    grid-template-areas:
+        "nav"
+        "section"
+        "main"
+        "footer"
     ;
 }
-nav{
+
+nav {
     background-color: whitesmoke;
     color: #525252;
     grid-area: nav;
@@ -24,25 +27,31 @@ nav{
     justify-content: space-between;
     align-items: center;
 }
-.logo-menu{
+
+.logo-menu {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 5%;
     padding-left: 5%;
 }
-.hide-menu{
+
+.hide-menu {
     padding-right: 15px;
     font-size: xx-large;
 }
-section{
+
+section {
     background-color: #F0ECE5;
     grid-area: section;
 }
-.filter{
+
+.filter {
     display: flex;
     justify-content: center;
 }
-form{
+
+form {
     width: 80%;
     display: flex;
     flex-direction: column;
@@ -52,27 +61,30 @@ form{
     padding: 10px;
 
 }
-main{
+
+main {
     background-color: white;
     grid-area: main;
     display: grid;
     grid-template-columns: 1fr;
     justify-items: center;
 }
-.coin-card{
+
+.coin-card {
     padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    page-break-inside: avoid;
 }
-button{
+
+button {
     padding: 10px;
     background-color: #CA3E47;
     color: #F0ECE5;
     font-weight: bold;
 }
-footer{
+
+footer {
     background-color: whitesmoke;
     color: #525252;
     grid-area: footer;
@@ -80,14 +92,17 @@ footer{
     display: flex;
     flex-direction: column-reverse;
 }
-.socialmedia-icons{
+
+.socialmedia-icons {
     padding: 10px;
 }
-.paginacion{
+
+.paginacion {
     display: flex;
     margin-bottom: 10px;
 }
-.paginacion a{
+
+.paginacion a {
     text-align: center;
     font-size: 20px;
     font-weight: 500;
@@ -98,45 +113,53 @@ footer{
     display: inline-block;
     width: 20px;
 }
-footer h2{
+
+footer h2 {
     margin-top: 0;
     margin-bottom: 10px;
     font-size: medium;
 }
-/* Media queries*/ 
-@media screen and (min-width: 576px){
+
+/* Media queries*/
+@media screen and (min-width: 576px) {
     .hide-menu {
         display: none;
-      }
-    nav ul{
-          list-style: none;
-          display: flex;
-          flex-direction: row;
-          padding-right: 20px;
-          gap: 30px;
-      }
-    .container{
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        padding-right: 20px;
+        gap: 30px;
+    }
+
+    .container {
         display: grid;
-        grid-template-areas: 
-        "nav nav"
-        "section main"
-        "footer footer"
+        grid-template-areas:
+            "nav nav"
+            "section main"
+            "footer footer"
         ;
         grid-template-columns: 15% 85%;
         height: 100vh;
     }
-    section{
+
+    section {
         background-color: #CA3E47;
         color: whitesmoke;
     }
-    img{
+
+    img {
         width: 200px;
         height: 150px;
     }
-    button{
+
+    button {
         padding: 5px;
     }
-    main{
+
+    main {
         background-color: white;
         grid-area: main;
         display: flex;
@@ -144,48 +167,56 @@ footer h2{
         flex-wrap: wrap;
         align-content: center;
     }
-    .coin-container{
+
+    .coin-container {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
     }
-    .paginacion{
+
+    .paginacion {
         display: flex;
         justify-content: center;
         margin-top: 20px;
     }
-    .paginacion a{
+
+    .paginacion a {
         background-color: antiquewhite;
         width: 15px;
     }
 }
+
 @media screen and (min-width: 992px) {
     .hide-menu {
-      display: none;
+        display: none;
     }
-    nav ul{
+
+    nav ul {
         list-style: none;
         display: flex;
         flex-direction: column;
         gap: 15px;
         font-weight: 500;
     }
-    img{
+
+    img {
         width: 300px;
         height: 250px;
     }
-    .container{
+
+    .container {
         display: grid;
-        grid-template-areas: 
-        "nav section"
-        "nav main"
-        "footer main"
+        grid-template-areas:
+            "nav section"
+            "nav main"
+            "footer main"
         ;
         grid-template-columns: 15% 85%;
         height: 100vh;
     }
-    nav{
+
+    nav {
         background-color: #414141;
         color: whitesmoke;
         grid-area: nav;
@@ -195,16 +226,17 @@ footer h2{
         align-items: center;
         font-size: 90%;
     }
-    nav .logo-menu{
-        padding: 0;
-        background-color: #313131;
-        width: 100%;
+
+    nav .logo-menu {
         padding-left: 5%;
+        font-size: 1vw;
     }
-    nav li{
+
+    nav li {
         padding: 5%;
     }
-    main{
+
+    main {
         background-color: #525252;
         grid-area: main;
         display: flex;
@@ -212,29 +244,34 @@ footer h2{
         flex-wrap: wrap;
         align-content: center;
     }
-    .coin-container{
+
+    .coin-container {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
     }
-    .paginacion{
+
+    .paginacion {
         display: flex;
         justify-content: center;
         margin-top: 20px;
     }
-    .paginacion a{
+
+    .paginacion a {
         background-color: whitesmoke;
         color: #525252;
     }
-    footer{
+
+    footer {
         background-color: #313131;
         color: whitesmoke;
     }
 
 }
+
 @media screen and (max-width: 576px) {
     nav ul {
-      display: none;
+        display: none;
     }
 }
